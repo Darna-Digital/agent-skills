@@ -3,5 +3,5 @@
 ## Usage
 
 ````
-npx skills add darna-digital/agent-skills/[skill-name]
+npx skills add darna-digital/skills/[skill-name]
 ````
