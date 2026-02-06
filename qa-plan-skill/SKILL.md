@@ -1,31 +1,14 @@
 ---
 name: qa-plan-skill
-description: Prepares a human readable QA plan
+description: Generate a BDD-style QA test plan as a CSV file based on current branch changes. Use when the user wants to create a QA plan, prepare test scenarios for a feature, generate BDD test cases, or document manual testing steps for a task.
 ---
 
-## How to name files?
-1. Check the current git branch for task number and name
+## Workflow
 
-## How a good QA plan looks like?
-1. Check ## How to name files?
-2. Prepare a csv file
-3. It should have the typical BDD (behaviour driven development) columns
-Scenario	Given	When	Then	Status
-
-## Where to place the plan?
-1. Place it in the plans folder near this SKILL.md
-
-## How should the QA plan have?
-1. Look at the components, templates, pages, elements.
-2. Extract URls, user behaviour, buttons, links, forms that will need to be interact with
-3. Consider if you need auth or not to test
-
-## Where should I look for changes to test?
-1. Check the current branch commits.
-
-## What I do
-I read the sections above me from bottom to top to create a comprehensive QA plan.
-
-## How to use me
-
-Call me in a chat, otherwise I won't load the context.
+1. Check current branch commits to identify what changed
+2. Inspect the affected components, templates, pages, and elements in the codebase
+3. Extract URLs, user behaviors, buttons, links, and forms that need testing
+4. Determine if authentication is required for testing
+5. Derive the file name from the current git branch task number and name
+6. Generate a CSV file in this skill's `plans/` folder (locate it next to this SKILL.md) with BDD columns:
+   `Scenario | Given | When | Then | Status`

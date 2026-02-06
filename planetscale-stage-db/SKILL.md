@@ -1,15 +1,11 @@
 ---
-name: planetscale-stage-db 
-description: Connect to PlanetScale database for staging testing, uses staging db branch
+name: planetscale-stage-db
+description: Connect to the PlanetScale staging database branch and execute SQL queries/mutations. Use when the user wants to query the staging database, run SQL against the staging environment, inspect staging data, or execute mutations on the staging PlanetScale branch.
 ---
 
-## What I do
+## Workflow
 
-- Check .env.stage-db
-- Connect to PlanetScale database for staging testing`
-- Ask the user what type of queries or mutations he wants to execute.
-- Convert user requests to SQL and execute them against the database (mysql)
-
-## When to use me
-
-Only load this skill after user asks for it.
+1. Read `.env.stage-db` for connection credentials
+2. Connect to the PlanetScale staging branch (MySQL)
+3. Ask the user what queries or mutations to execute
+4. Convert user requests to SQL and execute them against the database

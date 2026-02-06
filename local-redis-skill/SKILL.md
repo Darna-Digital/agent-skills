@@ -1,15 +1,11 @@
 ---
 name: local-redis-skill
-description: Works with local Docker based Redis
+description: Connect to and execute commands against a local Docker-based Redis instance. Use when the user wants to run Redis commands, inspect Redis keys/values, debug Redis data, or interact with the local Redis container.
 ---
 
-## What I do
+## Workflow
 
-1. check .redis.local
-2. find local redis url
-3. use docker to connect to that redis
-4. execute redis commands requested by the user
-
-## How to use me
-
-Call me in a chat, otherwise I won't load the context.
+1. Read `.redis.local` for the Redis connection URL
+2. Connect to Redis via Docker
+3. Ask the user what Redis commands to execute
+4. Execute the requested commands and return results

@@ -1,30 +1,29 @@
 ---
 name: composable-functions-skill
-description: Prepares boilerplate for clean, testable code
+description: Generate boilerplate for composable, testable TypeScript features using dependency injection. Use when the user wants to scaffold a new feature with clean code patterns, create testable functions with DI, generate RSC or React Hook adapters, or set up a feature structure with interfaces/functions/mocks/tests in src/features.
 ---
 
-## What are composable functions?
-The structure follows clean code principles with:
+## Pattern
 
-1. Interfaces defining dependencies and functions
-2. Pure functions that depend on injected dependencies
-3. Mocks for testing
-4. Adapters (RSC/Hooks) that wire up real dependencies
-5. Tests that validate behavior
+The composable functions pattern uses:
+- Interfaces defining dependencies (data + side effects) and function contracts
+- Pure functions that receive injected dependencies
+- Mock factories for testing
+- Adapters (RSC/Hooks) that wire up real dependencies
 
-## What I do
+## Workflow
 
-1. Look at the structure in .opencode/skill/composable-functions-skill/example
-2. Read it to get context, understand the clean code patterns, DI, testing
-3. Ask the user for the feature name
-4. Generate boilerplate code for the relevant feature.
-5. Location is in src/features
-6. The files, interfaces and functions should follow the feature name specified by the user
-7. Don't focus on implementing business logic yet, just generate a bare minimum boilerplate 
-8. Finally, ask the user what type of adapter he wants to create.
-9. Default options: RSC (react server components), React Hooks.
-10. If user specifies something else like API, proxy-handler, etc. Look at the codebase for examples. If you can't find them, then come up with your own way to implement the adapter.
+1. Read the example structure in `example/` to understand the patterns
+2. Ask the user for the feature name
+3. Generate minimal boilerplate in `src/features/<feature-name>/` with:
+   - `entity/<feature>.interfaces.ts` - dependency and function interfaces
+   - `functions/<feature>.functions.ts` - pure functions with DI
+   - `functions/<feature>.functions.mock.ts` - mock factory
+   - `functions/<feature>.functions.test.ts` - test file
+4. Ask the user what adapter type to create:
+   - **RSC** (React Server Components) - default
+   - **React Hooks** - default
+   - **Other** (API, proxy-handler, etc.) - search codebase for examples, otherwise improvise
+5. Generate the adapter in `adapters/<feature>.<type>.adapter.ts`
 
-## How to use me
-
-Call me in a chat, otherwise I won't load the context.
+Do not implement business logic - generate bare minimum boilerplate only.

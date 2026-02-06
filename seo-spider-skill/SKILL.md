@@ -1,21 +1,15 @@
 ---
 name: seo-spider-skill
-description: Processes SEO reports
+description: Analyze SEO spider crawl reports, prioritize issues, and generate technical fix suggestions. Use when the user wants to review SEO audit results, analyze crawl issues (canonicals, meta tags, response codes, headings, images, URLs), or get technical recommendations for fixing SEO problems.
 ---
 
-## What I do
+## Workflow
 
-1. Use .opencode/skill/seo-spider-skill/ as the base folder
-2. Check issues_reports folder, create it if it doesn't exist
-3. Check issues_overview_report.csv
-4. List me the issues, sort by high to low
-5. Ask me which issue to analyse.
-6. After I confirm, go to issues_reports folder and find the relevant csv file
-7. Understand the content's of the file
-8. Go back to the project folder and check src/app for routing structure to understand where the issue is
-9. Give me technical suggestions to fix that issue
-10. Write down those suggestions in .opencode/skill/seo-spider-skill/seo-suggestions/suggestion-name.md
-
-## How to use me
-
-Call me in a chat, otherwise I won't load the context.
+1. Locate the `issues_reports/` folder next to this SKILL.md (create if missing)
+2. Read `issues_overview_report.csv` from that folder
+3. List issues sorted by severity (high to low)
+4. Ask the user which issue to analyze
+5. Read the relevant CSV file from the `issues_reports/` folder
+6. Search the project's routing structure (e.g. `src/app`) to locate the affected pages
+7. Generate technical suggestions to fix the issue
+8. Write suggestions to the `seo-suggestions/` folder next to this SKILL.md as `<suggestion-name>.md`
