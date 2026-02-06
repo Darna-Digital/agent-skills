@@ -3,5 +3,5 @@
 ## Usage
 
 ````
-npx skills add darna-digital/skills/[skill-name]
+npx skills add https://github.com/darna-digital/skills --skill composable-functions
 ````
