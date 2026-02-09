@@ -7,9 +7,14 @@ description: Enforce project code standards when writing code
 
 1. Determine the language of the code being written or reviewed
 2. Read the relevant standards file from `languages/` (e.g., `languages/ts.md` for TypeScript)
-3. Apply all standards when writing new code or reviewing existing code
-4. When reviewing, flag violations with the specific rule and a suggested fix
+3. Read the relevant standards from `frameworks/` (e.g., `frameworks/tailwind.md` for Tailwind)`
+4. Apply all standards when writing new code or reviewing existing code
+5. When reviewing, flag violations with the specific rule and a suggested fix
 
-## Supported Languages
+## Supported languages
 
 - **TypeScript / TSX**: See [languages/ts.md](languages/ts.md) for all rules
+
+## Supported frameworks 
+
+- **Tailwind**: See [frameworks/tailwind.md](frameworks/tailwind.md) for all rules
